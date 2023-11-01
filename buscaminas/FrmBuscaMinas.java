@@ -4,17 +4,173 @@
  */
 package buscaminas;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author Usuario
  */
 public class FrmBuscaMinas extends javax.swing.JFrame {
 
+    int filas;
+    int columnas;
+    JButton[][] btns;
+    TableroMatriz tablero;
+
     /**
      * Creates new form FrmBuscaMinas
      */
     public FrmBuscaMinas() {
         initComponents();
+    }
+
+    public void Matriz() {
+        btns = new JButton[filas][columnas];
+        btns[0][0] = jButton1;
+        btns[0][1] = jButton2;
+        btns[0][2] = jButton3;
+        btns[0][3] = jButton4;
+        btns[0][4] = jButton5;
+        btns[0][5] = jButton6;
+        btns[0][6] = jButton7;
+        btns[0][7] = jButton8;
+        btns[0][8] = jButton9;
+        btns[0][9] = jButton10;
+        btns[0][10] = jButton11;
+        btns[0][11] = jButton12;
+        btns[1][0] = jButton13;
+        btns[1][1] = jButton14;
+        btns[1][2] = jButton15;
+        btns[1][3] = jButton16;
+        btns[1][4] = jButton17;
+        btns[1][5] = jButton18;
+        btns[1][6] = jButton19;
+        btns[1][7] = jButton20;
+        btns[1][8] = jButton21;
+        btns[1][9] = jButton22;
+        btns[1][10] = jButton23;
+        btns[1][11] = jButton24;
+        btns[2][0] = jButton25;
+        btns[2][1] = jButton26;
+        btns[2][2] = jButton27;
+        btns[2][3] = jButton28;
+        btns[2][4] = jButton29;
+        btns[2][5] = jButton30;
+        btns[2][6] = jButton31;
+        btns[2][7] = jButton32;
+        btns[2][8] = jButton33;
+        btns[2][9] = jButton34;
+        btns[2][10] = jButton35;
+        btns[2][11] = jButton36;
+        btns[3][0] = jButton37;
+        btns[3][1] = jButton38;
+        btns[3][2] = jButton39;
+        btns[3][3] = jButton40;
+        btns[3][4] = jButton41;
+        btns[3][5] = jButton42;
+        btns[3][6] = jButton43;
+        btns[3][7] = jButton44;
+        btns[3][8] = jButton45;
+        btns[3][9] = jButton46;
+        btns[3][10] = jButton47;
+        btns[3][11] = jButton48;
+        btns[4][0] = jButton49;
+        btns[4][1] = jButton50;
+        btns[4][2] = jButton51;
+        btns[4][3] = jButton52;
+        btns[4][4] = jButton53;
+        btns[4][5] = jButton54;
+        btns[4][6] = jButton55;
+        btns[4][7] = jButton56;
+        btns[4][8] = jButton57;
+        btns[4][9] = jButton58;
+        btns[4][10] = jButton59;
+        btns[4][11] = jButton60;
+        btns[5][0] = jButton61;
+        btns[5][1] = jButton62;
+        btns[5][2] = jButton63;
+        btns[5][3] = jButton64;
+        btns[5][4] = jButton65;
+        btns[5][5] = jButton66;
+        btns[5][6] = jButton67;
+        btns[5][7] = jButton68;
+        btns[5][8] = jButton69;
+        btns[5][9] = jButton70;
+        btns[5][10] = jButton71;
+        btns[5][11] = jButton72;
+        btns[6][0] = jButton73;
+        btns[6][1] = jButton74;
+        btns[6][2] = jButton75;
+        btns[6][3] = jButton76;
+        btns[6][4] = jButton77;
+        btns[6][5] = jButton78;
+        btns[6][6] = jButton79;
+        btns[6][7] = jButton80;
+        btns[6][8] = jButton81;
+        btns[6][9] = jButton82;
+        btns[6][10] = jButton83;
+        btns[6][11] = jButton84;
+        btns[7][0] = jButton85;
+        btns[7][1] = jButton86;
+        btns[7][2] = jButton87;
+        btns[7][3] = jButton88;
+        btns[7][4] = jButton89;
+        btns[7][5] = jButton90;
+        btns[7][6] = jButton91;
+        btns[7][7] = jButton92;
+        btns[7][8] = jButton93;
+        btns[7][9] = jButton94;
+        btns[7][10] = jButton95;
+        btns[7][11] = jButton96;
+        btns[8][0] = jButton97;
+        btns[8][1] = jButton98;
+        btns[8][2] = jButton99;
+        btns[8][3] = jButton100;
+        btns[8][4] = jButton101;
+        btns[8][5] = jButton102;
+        btns[8][6] = jButton103;
+        btns[8][7] = jButton104;
+        btns[8][8] = jButton105;
+        btns[8][9] = jButton106;
+        btns[8][10] = jButton107;
+        btns[8][11] = jButton108;
+        btns[9][0] = jButton109;
+        btns[9][1] = jButton110;
+        btns[9][2] = jButton111;
+        btns[9][3] = jButton112;
+        btns[9][4] = jButton113;
+        btns[9][5] = jButton114;
+        btns[9][6] = jButton115;
+        btns[9][7] = jButton116;
+        btns[9][8] = jButton117;
+        btns[9][9] = jButton118;
+        btns[9][10] = jButton119;
+        btns[9][11] = jButton120;
+        btns[10][0] = jButton121;
+        btns[10][1] = jButton122;
+        btns[10][2] = jButton123;
+        btns[10][3] = jButton124;
+        btns[10][4] = jButton125;
+        btns[10][5] = jButton126;
+        btns[10][6] = jButton127;
+        btns[10][7] = jButton128;
+        btns[10][8] = jButton129;
+        btns[10][9] = jButton130;
+        btns[10][10] = jButton131;
+        btns[10][11] = jButton132;
+        btns[11][0] = jButton133;
+        btns[11][1] = jButton134;
+        btns[11][2] = jButton135;
+        btns[11][3] = jButton136;
+        btns[11][4] = jButton137;
+        btns[11][5] = jButton138;
+        btns[11][6] = jButton139;
+        btns[11][7] = jButton140;
+        btns[11][8] = jButton141;
+        btns[11][9] = jButton142;
+        btns[11][10] = jButton143;
+        btns[11][11] = jButton144;
+
     }
 
     /**
@@ -174,19 +330,8 @@ public class FrmBuscaMinas extends javax.swing.JFrame {
         jButton142 = new javax.swing.JButton();
         jButton143 = new javax.swing.JButton();
         jButton144 = new javax.swing.JButton();
-        jButton145 = new javax.swing.JButton();
-        jButton146 = new javax.swing.JButton();
-        jButton147 = new javax.swing.JButton();
-        jButton148 = new javax.swing.JButton();
-        jButton149 = new javax.swing.JButton();
-        jButton150 = new javax.swing.JButton();
-        jButton151 = new javax.swing.JButton();
-        jButton152 = new javax.swing.JButton();
-        jButton153 = new javax.swing.JButton();
-        jButton154 = new javax.swing.JButton();
-        jButton155 = new javax.swing.JButton();
-        jButton156 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         jButton97.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1060,78 +1205,6 @@ public class FrmBuscaMinas extends javax.swing.JFrame {
             }
         });
 
-        jButton145.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton145ActionPerformed(evt);
-            }
-        });
-
-        jButton146.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton146ActionPerformed(evt);
-            }
-        });
-
-        jButton147.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton147ActionPerformed(evt);
-            }
-        });
-
-        jButton148.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton148ActionPerformed(evt);
-            }
-        });
-
-        jButton149.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton149ActionPerformed(evt);
-            }
-        });
-
-        jButton150.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton150ActionPerformed(evt);
-            }
-        });
-
-        jButton151.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton151ActionPerformed(evt);
-            }
-        });
-
-        jButton152.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton152ActionPerformed(evt);
-            }
-        });
-
-        jButton153.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton153ActionPerformed(evt);
-            }
-        });
-
-        jButton154.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton154ActionPerformed(evt);
-            }
-        });
-
-        jButton155.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton155ActionPerformed(evt);
-            }
-        });
-
-        jButton156.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton156ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1404,37 +1477,13 @@ public class FrmBuscaMinas extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton143, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton144, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton145, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton146, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton147, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton148, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton149, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton150, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton151, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton152, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton153, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton154, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton155, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton156, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton144, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1588,46 +1637,43 @@ public class FrmBuscaMinas extends javax.swing.JFrame {
                     .addComponent(jButton135, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton134, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton133, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton156, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton155, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton154, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton153, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton152, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton151, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton150, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton149, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton148, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton147, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton146, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton145, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGap(41, 41, 41))
         );
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buscaminas/CarutaFelizBuscaMinas.jpeg"))); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setText("Busca Minas");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(239, 239, 239)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(23, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(239, 239, 239))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(266, 266, 266))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -2210,54 +2256,6 @@ public class FrmBuscaMinas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton144ActionPerformed
 
-    private void jButton145ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton145ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton145ActionPerformed
-
-    private void jButton146ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton146ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton146ActionPerformed
-
-    private void jButton147ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton147ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton147ActionPerformed
-
-    private void jButton148ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton148ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton148ActionPerformed
-
-    private void jButton149ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton149ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton149ActionPerformed
-
-    private void jButton150ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton150ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton150ActionPerformed
-
-    private void jButton151ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton151ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton151ActionPerformed
-
-    private void jButton152ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton152ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton152ActionPerformed
-
-    private void jButton153ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton153ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton153ActionPerformed
-
-    private void jButton154ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton154ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton154ActionPerformed
-
-    private void jButton155ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton155ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton155ActionPerformed
-
-    private void jButton156ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton156ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton156ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -2345,19 +2343,7 @@ public class FrmBuscaMinas extends javax.swing.JFrame {
     private javax.swing.JButton jButton142;
     private javax.swing.JButton jButton143;
     private javax.swing.JButton jButton144;
-    private javax.swing.JButton jButton145;
-    private javax.swing.JButton jButton146;
-    private javax.swing.JButton jButton147;
-    private javax.swing.JButton jButton148;
-    private javax.swing.JButton jButton149;
     private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton150;
-    private javax.swing.JButton jButton151;
-    private javax.swing.JButton jButton152;
-    private javax.swing.JButton jButton153;
-    private javax.swing.JButton jButton154;
-    private javax.swing.JButton jButton155;
-    private javax.swing.JButton jButton156;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
@@ -2451,6 +2437,7 @@ public class FrmBuscaMinas extends javax.swing.JFrame {
     private javax.swing.JButton jButton98;
     private javax.swing.JButton jButton99;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
