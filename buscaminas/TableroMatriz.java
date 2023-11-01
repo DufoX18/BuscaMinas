@@ -47,8 +47,6 @@ public class TableroMatriz {
     public boolean[][] getCamposRevelados() {
         return camposRevelados;
     }
-    
-    
 
     public void inicializarTablero() {
         // Inicializa el tablero con ceros
@@ -60,10 +58,10 @@ public class TableroMatriz {
         }
 
         // Genera minas aleatorias en el tablero
-        generarMinas();
+        Minas();
     }
 
-    public void generarMinas() {
+    public void Minas() {
         Random rand = new Random();
         int minasGeneradas = 0;
 
@@ -79,22 +77,22 @@ public class TableroMatriz {
         }
 
         // Calcula el número de minas cercanas para cada celda
-        calcularNumerosCercanos();
+        numerosCercanos();
     }
 
-    public void calcularNumerosCercanos() {
+    public void numerosCercanos() {
         // Calcula la cantidad de minas cercanas para cada celda
         for (int fila = 0; fila < filas; fila++) {
             for (int columna = 0; columna < columnas; columna++) {
                 if (tablero[fila][columna] != -1) {
-                    int minasCercanas = contarMinasCercanas(fila, columna);
+                    int minasCercanas = minasCercanas(fila, columna);
                     tablero[fila][columna] = minasCercanas;
                 }
             }
         }
     }
 
-    public int contarMinasCercanas(int fila, int columna) {
+    public int minasCercanas(int fila, int columna) {
         int minasCercanas = 0;
         for (int i = -1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
@@ -137,7 +135,7 @@ public class TableroMatriz {
         }
     }
 
-    public boolean haGanado() {
+    public boolean victoria() {
         for (int fila = 0; fila < filas; fila++) {
             for (int columna = 0; columna < columnas; columna++) {
                 // Si alguna celda no minada no está revelada, el juego no ha terminado
