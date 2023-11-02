@@ -16,7 +16,7 @@ public class TableroMatriz {
     private int[][] tablero; // Matriz para representar el estado del tablero
     private int filas;
     private int columnas;
-    private int minas;
+    private int minas = 40;
     private boolean[][] camposRevelados;
 
     public TableroMatriz(int filas, int columnas, int minas) {
@@ -26,6 +26,8 @@ public class TableroMatriz {
         this.tablero = new int[filas][columnas];
         this.camposRevelados = new boolean[filas][columnas];
         inicializarTablero();
+        numerosCercanos();
+
     }
 
     public int[][] getTablero() {
@@ -49,15 +51,12 @@ public class TableroMatriz {
     }
 
     public void inicializarTablero() {
-        // Inicializa el tablero con ceros
         for (int fila = 0; fila < filas; fila++) {
             for (int columna = 0; columna < columnas; columna++) {
                 tablero[fila][columna] = 0;
                 camposRevelados[fila][columna] = false;
             }
         }
-
-        // Genera minas aleatorias en el tablero
         Minas();
     }
 
@@ -69,14 +68,11 @@ public class TableroMatriz {
             int fila = rand.nextInt(filas);
             int columna = rand.nextInt(columnas);
 
-            // Verifica si ya hay una mina en esa posición
             if (tablero[fila][columna] != -1) {
                 tablero[fila][columna] = -1;
                 minasGeneradas++;
             }
         }
-
-        // Calcula el número de minas cercanas para cada celda
         numerosCercanos();
     }
 
@@ -165,4 +161,17 @@ public class TableroMatriz {
             desbloquearCasillasAdyacentes(fila, columna + 1, buttons); // Derecha
         }
     }
+
+    public boolean juegoPerdido() {
+        for (int fila = 0; fila < filas; fila++) {
+            for (int columna = 0; columna < columnas; columna++) {
+                if (camposRevelados[fila][columna] && tablero[fila][columna] == -1) {
+                    // Se ha revelado una celda con mina, el juego se ha perdido
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
 }

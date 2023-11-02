@@ -5,10 +5,13 @@
 package buscaminas;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 /**
@@ -176,7 +179,6 @@ public class FrmBuscaMinas extends javax.swing.JFrame {
         btns[11][10] = jButton143;
         btns[11][11] = jButton144;
 
-        // Agrega un MouseListener a cada botón
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
                 btns[i][j].addMouseListener(new MouseAdapter() {
@@ -194,7 +196,44 @@ public class FrmBuscaMinas extends javax.swing.JFrame {
                 });
             }
         }
+        btns[filas][columnas].addActionListener((ActionEvent e) -> {
+            // Llama a revelarCelda con las coordenadas correspondientes
+            revelarCeldaEnInterfaz(filas, columnas);
+        });
 
+    }
+
+    public void actualizarInterfaz() {
+        for (int fila = 0; fila < filas; fila++) {
+            for (int columna = 0; columna < columnas; columna++) {
+                if (tablero.getCamposRevelados()[fila][columna]) {
+
+                    btns[fila][columna].setText(String.valueOf(tablero.getTablero()[fila][columna]));
+                } else {
+
+                    btns[fila][columna].setText("");
+
+                }
+            }
+        }
+    }
+
+    public void inicializarTablero() {
+        tablero.inicializarTablero();
+        actualizarInterfaz();
+    }
+
+    public void revelarCeldaEnInterfaz(int fila, int columna) {
+        tablero.revelarCelda(fila, columna);
+
+        // Actualiza la interfaz gráfica para reflejar el estado actual del tablero
+        actualizarInterfaz();
+        if (tablero.victoria()) {
+            JOptionPane.showMessageDialog(this, "¡Felicidades, haz ganado!");
+        } else if (tablero.juegoPerdido()) {
+            JOptionPane.showMessageDialog(this, "¡Oh no, haz perdido!");
+
+        }
     }
 
     /**
